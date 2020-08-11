@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import CreateNavbar from "./components/createNavbar";
+import Footer from "./components/footer";
+import CreateNewPost from "./components/createNewPost";
+import ViewPosts from "./components/viewPosts";
+import { useSelector } from "react-redux";
 
 function App() {
+  const mainView = useSelector((state) => state.mainView);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CreateNavbar />
+      <div className="main">{mainView ? <ViewPosts /> : <CreateNewPost />}</div>
+      <Footer />
     </div>
   );
 }
