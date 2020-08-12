@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/styles.css";
 import { useDispatch } from "react-redux";
-// import "bootstrap/dist/css/bootstrap.min.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "../styles/bootstrap.min.css";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar } from "react-bootstrap";
 import { Nav } from "react-bootstrap";
 

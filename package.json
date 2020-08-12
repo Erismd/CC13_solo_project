@@ -24,7 +24,7 @@
     "shortid": "^2.2.15"
   },
   "scripts": {
-    "server": "node server",
+    "server": "react-scripts start",
     "start": "node server",
     "build": "react-scripts build",
     "test": "react-scripts test",
