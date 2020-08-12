@@ -2,7 +2,9 @@ import { createStore } from "redux";
 
 const defaultState = {
   posts: [],
-  mainView : true
+  mainView: true,
+  contactView: true,
+  editcontents: "",
 };
 
 const blogs = (state = defaultState, action) => {
@@ -10,7 +12,11 @@ const blogs = (state = defaultState, action) => {
     case "ADD_NEW_POST":
       return { ...state, posts: [...state.posts, action.posts] };
     case "SWITCH_PAGE":
-        return {...state, mainView: !state.mainView}
+      return { ...state, mainView: !state.mainView };
+    case "ADD_CONTENTS":
+      return { ...state, editcontents: action.editcontents };
+    case "SWITCH_CONTACT":
+      return { ...state, contactView: !state.contactView };
     default:
       return state;
   }

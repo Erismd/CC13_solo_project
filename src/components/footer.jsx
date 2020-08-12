@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="footer-container">
       <div class="footer-padding"></div>
       <div class="footer">
-        <p>Made by Eri S</p>
+        <p>Made with ❤️ by Eri S</p>
       </div>
     </div>
   );

@@ -20,20 +20,11 @@ export default function ViewPosts() {
   }, []);
 
   const createPosts = () => {
-    console.log("!!!!", posts);
     return posts.map((post) => {
       return (
         <div className="post">
           <h2>{post.title}</h2>
-          <p>{post.contents.substring(0, 150) + " ..."}</p>
-          <a
-            href="#"
-            onClick={() => {
-              dispatch({ type: "SWITCH_PAGE" });
-            }}
-          >
-            Read More
-          </a>
+          <div dangerouslySetInnerHTML={{ __html: post.contents || "" }}></div>
         </div>
       );
     });
@@ -41,7 +32,7 @@ export default function ViewPosts() {
 
   return (
     <>
-      <section>
+      <section className="body">
         {createPosts()}
         <button>Edit</button>
         <button>Delete</button>
