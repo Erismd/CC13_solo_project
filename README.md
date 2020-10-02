@@ -1,6 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Simple Blog Posting App
+This is a simple easy web blog posting app where you can see your friends posts as well.
 
 In the project directory, you can run:
 
